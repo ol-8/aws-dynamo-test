@@ -36,7 +36,9 @@ public class BookController {
 
   @DeleteMapping("/{id}")
   public void deleteBook(@PathVariable String id) {
-    dynamoDBMapper.delete(id);
+    var book = new Book();
+    book.setId(id);
+    dynamoDBMapper.delete(book);
   }
 
   @GetMapping
