@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import aws.dynamo.test.model.Book;
@@ -21,7 +22,7 @@ public class BookController {
   private final DynamoDBMapper dynamoDBMapper;
 
   @PostMapping
-  public String createBook(Book book) {
+  public String createBook(@RequestBody Book book) {
       String id = UUID.randomUUID().toString();
       book.setId(id);
       dynamoDBMapper.save(book);

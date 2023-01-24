@@ -1,6 +1,6 @@
 aws:
   dynamodb:
-    endpoint: ${db_endpoint}
+    endpoint: ${db_endpoint:dynamodb.us-east-1.amazonaws.com}
   access:
     key: ${db_key}
     secret-key: ${db_secret_key}
