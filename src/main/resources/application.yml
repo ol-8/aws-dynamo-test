@@ -1,0 +1,7 @@
+aws:
+  dynamodb:
+    endpoint: ${db_endpoint}
+  access:
+    key: ${db_key}
+    secret-key: ${db_secret_key}
+  region: ${db_region:us-east-1}
