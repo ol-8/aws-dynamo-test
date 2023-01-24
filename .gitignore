@@ -1,0 +1,21 @@
+#
+# Eclipse IDE
+#
+/.settings
+/.project
+/.classpath
+/.checkstyle
+/.factorypath
+/.sonar
+
+#
+# Maven
+#
+/target
+
+#
+# Intellij
+#
+/.idea
+*.iml
+
